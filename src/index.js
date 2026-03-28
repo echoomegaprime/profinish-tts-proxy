@@ -89,9 +89,9 @@ export default {
               }
             }
             // If ElevenLabs fails, fall through to OpenAI
-            console.log('ElevenLabs failed, falling back to OpenAI:', elRes.status);
+            console.log(JSON.stringify({ level: 'warn', service: 'profinish-tts-proxy', msg: 'ElevenLabs failed, falling back to OpenAI', status: elRes.status, ts: new Date().toISOString() }));
           } catch (elErr) {
-            console.log('ElevenLabs error, falling back to OpenAI:', elErr.message);
+            console.log(JSON.stringify({ level: 'warn', service: 'profinish-tts-proxy', msg: 'ElevenLabs error, falling back to OpenAI', error: elErr.message, ts: new Date().toISOString() }));
           }
         }
 
