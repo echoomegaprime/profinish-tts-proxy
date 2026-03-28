@@ -1,3 +1,7 @@
 name = "profinish-tts-proxy"
 main = "src/index.js"
 compatibility_date = "2024-12-01"
+
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "echo_metrics"
